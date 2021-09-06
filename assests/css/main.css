@@ -1,0 +1,175 @@
+html{
+    font-family: 'Lato', sans-serif;
+}
+
+/* color amarillo a las estrellas */
+.fa-star {
+    color: #ffc400;
+}
+
+.container {
+    background: #00F260;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.content {
+    background-color: beige;
+    max-width: 960px;
+    /*max-height: 580px;*/
+    width: 100%;
+    height: 80vh;
+    /* SOMBRA */
+    /* box-shadow; DIFERENCIAHORIZONTAL DEIFERENCIAVERTICAL DESENFOQUE */
+    box-shadow: 0 3px 6px rgb(0, 0, 0, 0.5);
+    border-radius: 4px;
+
+    /* POSICIONES */ 
+    position: relative;
+
+    /*padding: 1.8rem;*/
+    overflow: hidden;
+}
+
+.actions {
+    /*POSICIONAR*/
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+}
+
+.close {
+    height: 40px;
+    width: 40px;
+    color: white;
+    background-color: #0575E6;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgb( 0, 0, 0, 0.16);
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.titulo {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.tabla {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.tabla td, .tabla th {
+    padding: 1rem;
+    text-align: left;
+}
+
+td {
+    display: block;
+    width: 100%;
+}
+
+th {
+    display: none;
+}
+
+td:nth-last-of-type(1) {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+.tabla tr:nth-child(even) {
+    background-color: #f3E5f5;
+}
+
+.titulo-item{
+    border-bottom-style: solid;
+    border-color: blue;
+    border-width: 2px;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.position {
+    background-color: #0575E6;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:active {
+    background-color: red;
+}
+
+.direccion {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #642873; 
+}
+
+.imagen-principal {
+    height: 20rem;
+    float: left;
+    margin-right: 1rem;
+}
+
+.espacio {
+    margin-top: 1rem;
+}
+
+/*mobile first*/
+/*lo primero es pensar las media query para los dispositivos grandes y No para los pequeños*/
+@media (max-width: 550px) {
+    .container {
+        height: 500px;
+    }
+}
+
+@media (min-width: 700px) {
+    th{
+        display: table-cell;
+    }
+    td{
+        display: table-cell;
+        width: auto;
+    }
+    td:nth-of-type(1) {
+        font-size: 1rem;
+        color: black;
+        font-weight: normal;
+    }
+    .content {
+        padding: 1.8rem;
+    }
+
+    td:nth-of-type(1) {
+        font-size: 1rem;
+        color: black;
+        font-weight: normal;
+    }
+    
+}
